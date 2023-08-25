@@ -254,6 +254,7 @@ MonoBehaviour:
   - {fileID: 2727394694025809407, guid: f92a64e4594ac6f4f97e1ef5abd6ee47, type: 3}
   - {fileID: 1161272968540761641, guid: 0351b23e3e61a664c8cacf58896f7daf, type: 3}
   gemSpeed: 7
+  matchFind: {fileID: 0}
 --- !u!4 &1196495830
 Transform:
   m_ObjectHideFlags: 0
@@ -298,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ccc099c9d6dab14e819fbd17ab1ef00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMatches: []
 --- !u!4 &1502801459
 Transform:
   m_ObjectHideFlags: 0

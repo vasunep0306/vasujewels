@@ -17,6 +17,19 @@ public class Gem : MonoBehaviour
 
     private Gem otherGem;
 
+    public enum GemType
+    {
+        Blue,
+        Green,
+        Red,
+        Yellow,
+        Purple
+    }
+
+    public GemType type;
+
+    public bool isMatched;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +39,15 @@ public class Gem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.Lerp(transform.position, posIndex, board.gemSpeed * Time.deltaTime);
+        if(Vector2.Distance(transform.position, posIndex) > .01f)
+        {
+            transform.position = Vector2.Lerp(transform.position, posIndex, board.gemSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = new Vector3(posIndex.x, posIndex.y, 0f);
+            board.allGems[posIndex.x, posIndex.y] = this;
+        }
         if(mousePress && Input.GetMouseButtonUp(0))
         {
             mousePress = false;

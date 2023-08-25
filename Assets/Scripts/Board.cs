@@ -13,6 +13,8 @@ public class Board : MonoBehaviour
 
     public Gem[,] allGems;
 
+    public float gemSpeed =7f;
+
     // Start is called before the first frame update
     void Start()
     {

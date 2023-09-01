@@ -109,7 +109,7 @@ public class Board : MonoBehaviour
     }
 
 
-    private void DestroyMatches()
+    public void DestroyMatches()
     {
         for(int i = 0; i < matchFind.currentMatches.Count; i++)
         {

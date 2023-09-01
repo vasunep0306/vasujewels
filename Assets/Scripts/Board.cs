@@ -36,7 +36,7 @@ public class Board : MonoBehaviour
 
     void Update()
     {
-        matchFind.FindAllMatches();
+        //matchFind.FindAllMatches();
     }
 
     private void Setup()
@@ -171,8 +171,12 @@ public class Board : MonoBehaviour
 
         if(matchFind.currentMatches.Count > 0)
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(.5f);
             DestroyMatches();
+        } else
+        {
+            yield return new WaitForSeconds(.5f);
+            currentState = BoardState.move;
         }
 
     }

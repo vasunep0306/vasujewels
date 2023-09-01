@@ -164,5 +164,11 @@ public class Board : MonoBehaviour
         yield return null;
     }
 
+    private void RefillBoard()
+    {
+        // TODO: Implement the logic to refill the board here
+    }
+
+
 
 }

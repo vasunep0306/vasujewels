@@ -94,4 +94,16 @@ public class Board : MonoBehaviour
 
         return false;
     }
+
+
+    private void DestroyMatchedGemAt()
+    {
+
+    }
+
+
+    private void DestroyMatches()
+    {
+
+    }
 }

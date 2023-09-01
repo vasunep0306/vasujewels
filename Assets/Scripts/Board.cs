@@ -174,9 +174,12 @@ public class Board : MonoBehaviour
             // Loop through each row (y) in the column
             for (int y = 0; y < height; y++)
             {
-                int gemToUse = Random.Range(0, gems.Length);
+                if(allGems[x,y] == null)
+                {
+                    int gemToUse = Random.Range(0, gems.Length);
 
-                SpawnGem(new Vector2Int(x, y) ,gems[gemToUse]);
+                    SpawnGem(new Vector2Int(x, y), gems[gemToUse]);
+                }
             }
         }
     }

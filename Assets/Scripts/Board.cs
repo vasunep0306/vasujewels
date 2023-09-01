@@ -18,7 +18,8 @@ public class Board : MonoBehaviour
     [HideInInspector]
     public MatchFinder matchFind;
 
-    public enum boardState { wait; move; }
+    public enum BoardState { wait, move }
+    public BoardState currentState = BoardState.move;
 
     private void Awake()
     {

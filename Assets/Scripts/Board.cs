@@ -162,7 +162,15 @@ public class Board : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         RefillBoard();
+        yield return new WaitForSeconds(.5f);
 
+        matchFind.FindAllMatches();
+
+        if(matchFind.currentMatches.Count > 0)
+        {
+            yield return new WaitForSeconds(1.5f);
+            DestroyMatches();
+        }
 
     }
 

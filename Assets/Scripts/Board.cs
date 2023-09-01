@@ -190,8 +190,28 @@ public class Board : MonoBehaviour
                 }
             }
         }
+        CheckMisplacedGems();
     }
 
 
+    private void CheckMisplacedGems()
+    {
+        List<Gem> foundGems = new List<Gem>();
+        foundGems.AddRange(FindObjectsOfType<Gem>());
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (foundGems.Contains(allGems[x, y]))
+                {
+                    foundGems.Remove(allGems[x, y]);
+                }    
+            }
+        }
 
+        foreach(Gem g in foundGems)
+        {
+            Destroy(g.gameObject);
+        }
+    }
 }

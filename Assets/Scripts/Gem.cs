@@ -52,8 +52,12 @@ public class Gem : MonoBehaviour
         if(mousePress && Input.GetMouseButtonUp(0))
         {
             mousePress = false;
-            finalTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            CalculateAngle();
+            if(board.currentState == Board.BoardState.move)
+            {
+                finalTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                CalculateAngle();
+            }
+           
         }
     }
 

@@ -18,6 +18,8 @@ public class Board : MonoBehaviour
     [HideInInspector]
     public MatchFinder matchFind;
 
+    public enum boardState { wait; move; }
+
     private void Awake()
     {
         matchFind = FindObjectOfType<MatchFinder>();

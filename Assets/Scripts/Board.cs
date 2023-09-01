@@ -155,18 +155,30 @@ public class Board : MonoBehaviour
             // Reset the null counter for the next column
             nullCounter = 0;
         }
+        StartCoroutine(FillBoardCo());
     }
 
     private IEnumerator FillBoardCo()
     {
-        // TODO: Implement the logic to fill the board here
+        yield return new WaitForSeconds(.5f);
+        RefillBoard();
 
-        yield return null;
+
     }
 
     private void RefillBoard()
     {
-        // TODO: Implement the logic to refill the board here
+        // Loop through each column (x)
+        for (int x = 0; x < width; x++)
+        {
+            // Loop through each row (y) in the column
+            for (int y = 0; y < height; y++)
+            {
+                int gemToUse = Random.Range(0, gems.Length);
+
+                SpawnGem(new Vector2Int(x, y) ,gems[gemToUse]);
+            }
+        }
     }
 
 

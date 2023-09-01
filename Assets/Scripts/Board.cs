@@ -157,4 +157,12 @@ public class Board : MonoBehaviour
         }
     }
 
+    private IEnumerator FillBoardCo()
+    {
+        // TODO: Implement the logic to fill the board here
+
+        yield return null;
+    }
+
+
 }

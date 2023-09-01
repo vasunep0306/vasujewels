@@ -118,5 +118,43 @@ public class Board : MonoBehaviour
                 DestroyMatchedGemAt(matchFind.currentMatches[i].posIndex);
             }
         }
+
+        StartCoroutine(DecreaseRowCo());
     }
+
+
+    // Coroutine to decrease the row of gems in the game board
+    private IEnumerator DecreaseRowCo()
+    {
+        // Wait for 0.2 seconds before executing the next line of code
+        yield return new WaitForSeconds(.2f);
+
+        // Counter to keep track of null or missing gems in a column
+        int nullCounter = 0;
+
+        // Loop through each column (x)
+        for (int x = 0; x < width; x++)
+        {
+            // Loop through each row (y) in the column
+            for (int y = 0; y < height; y++)
+            {
+                // If the gem at this position is null, increment the null counter
+                if (allGems[x, y] == null)
+                {
+                    nullCounter++;
+                }
+                // If the gem is not null and there are null gems above it
+                else if (nullCounter > 0)
+                {
+                    // Move the gem down by the number of null gems above it
+                    allGems[x, y].posIndex.y -= nullCounter;
+                    allGems[x, y - nullCounter] = allGems[x, y];
+                    allGems[x, y] = null;
+                }
+            }
+            // Reset the null counter for the next column
+            nullCounter = 0;
+        }
+    }
+
 }

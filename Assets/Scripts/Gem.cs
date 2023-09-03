@@ -31,6 +31,8 @@ public class Gem : MonoBehaviour
     public bool isMatched;
     private Vector2Int previousPosition;
 
+    public GameObject destroyEffect;
+
     // Start is called before the first frame update
     void Start()
     {

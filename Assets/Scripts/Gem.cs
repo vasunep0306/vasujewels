@@ -23,7 +23,8 @@ public class Gem : MonoBehaviour
         Green,
         Red,
         Yellow,
-        Purple
+        Purple,
+        Bomb
     }
 
     public GemType type;

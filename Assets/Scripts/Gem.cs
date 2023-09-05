@@ -17,6 +17,8 @@ public class Gem : MonoBehaviour
 
     private Gem otherGem;
 
+    public int blastSize=2;
+
     public enum GemType
     {
         Blue,

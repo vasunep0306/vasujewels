@@ -777,6 +777,8 @@ MonoBehaviour:
   roundTime: 60
   board: {fileID: 1196495829}
   currentScore: 0
+  displayScore: 0
+  scoreSpeed: 5
 --- !u!1 &1074515915
 GameObject:
   m_ObjectHideFlags: 0

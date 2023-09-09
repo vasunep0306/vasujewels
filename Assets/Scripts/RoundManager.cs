@@ -9,12 +9,21 @@ public class RoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        uiMan = FindObjectOfType<UIManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(roundTime > 0)
+        {
+            roundTime -= Time.deltaTime;
+
+            if (roundTime <= 0)
+            {
+                roundTime = 0;
+            }
+        }
+        uiMan.timeText.text = roundTime.ToString("0.0") + "s";
     }
 }

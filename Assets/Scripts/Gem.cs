@@ -36,6 +36,8 @@ public class Gem : MonoBehaviour
 
     public GameObject destroyEffect;
 
+    public int scoreValue = 10;
+
     // Start is called before the first frame update
     void Start()
     {

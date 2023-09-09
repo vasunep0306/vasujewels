@@ -134,6 +134,7 @@ public class Board : MonoBehaviour
         {
             if(matchFind.currentMatches[i] != null)
             {
+                ScoreCheck(matchFind.currentMatches[i]);
                 DestroyMatchedGemAt(matchFind.currentMatches[i].posIndex);
             }
         }
@@ -276,6 +277,11 @@ public class Board : MonoBehaviour
             }
         }
         StartCoroutine(FillBoardCo());
+    }
+
+    public void ScoreCheck(Gem gemToCheck)
+    {
+        roundMan.currentScore += gemToCheck.scoreValue;
     }
 
 }

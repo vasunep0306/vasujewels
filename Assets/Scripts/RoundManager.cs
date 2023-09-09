@@ -6,8 +6,11 @@ public class RoundManager : MonoBehaviour
 {
     public float roundTime = 60f;
     public Board board;
-    private UIManager uiMan;
+    public int currentScore;
+    public float displayScore;
+    public float scoreSpeed;
 
+    private UIManager uiMan;
     private bool endingRound = false;
     // Start is called before the first frame update
     void Awake()
@@ -35,7 +38,9 @@ public class RoundManager : MonoBehaviour
             WinCheck();
             endingRound = false;
         }
+        displayScore = Mathf.Lerp(displayScore, currentScore, scoreSpeed * Time.deltaTime);
         uiMan.timeText.text = roundTime.ToString("0.0") + "s";
+        uiMan.scoreText.text = displayScore.ToString();
     }
 
     private void WinCheck()

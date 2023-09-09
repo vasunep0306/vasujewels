@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &108997438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -342,6 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 1454576206}
   scoreText: {fileID: 1504235379}
+  roundOverScreen: {fileID: 108997437}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f4ca545e943b884c8171462ad1be93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 60
+  roundTime: 5
+  board: {fileID: 1196495829}
 --- !u!1 &1074515915
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +895,7 @@ MonoBehaviour:
   currentState: 1
   bomb: {fileID: 7837695019459349892, guid: af2f056613faee04b9ee7cb41fbe854d, type: 3}
   bombChance: 2
+  roundMan: {fileID: 637953404}
 --- !u!4 &1196495830
 Transform:
   m_ObjectHideFlags: 0
@@ -1700,7 +1703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.2811, y: -19}
+  m_AnchoredPosition: {x: 23, y: 325}
   m_SizeDelta: {x: 1561.2234, y: 260.3709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974895888

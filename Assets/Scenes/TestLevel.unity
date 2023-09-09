@@ -1137,14 +1137,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f4ca545e943b884c8171462ad1be93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 5
+  roundTime: 60
   board: {fileID: 1196495829}
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
   scoreTarget1: 100
-  scoreTarget2: 500
-  scoreTarget3: 1000
+  scoreTarget2: 1000
+  scoreTarget3: 10000
 --- !u!1 &695936957
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,9 +38,9 @@ public class RoundManager : MonoBehaviour
             WinCheck();
             endingRound = false;
         }
-        displayScore = Mathf.Lerp(displayScore, currentScore, scoreSpeed * Time.deltaTime);
+        displayScore = Mathf.Lerp(displayScore, currentScore, scoreSpeed * Time.deltaTime); // Interpolate displayScore to currentScore smoothly using Mathf.Lerp method
         uiMan.timeText.text = roundTime.ToString("0.0") + "s";
-        uiMan.scoreText.text = displayScore.ToString();
+        uiMan.scoreText.text = displayScore.ToString("0");
     }
 
     private void WinCheck()
